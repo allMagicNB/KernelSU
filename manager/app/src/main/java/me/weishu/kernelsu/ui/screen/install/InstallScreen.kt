@@ -242,10 +242,10 @@ fun InstallScreen() {
         onSelectMethod = { method -> installMethod = method },
         onDownloadFile = { downloadDialogShown = true },
         onSelectBootImage = {
-            selectImageLauncher.launch(Intent(Intent.ACTION_GET_CONTENT).apply { type = "application/octet-stream" })
+            selectImageLauncher.launch(Intent(Intent.ACTION_GET_CONTENT).apply { type = "*/*" })
         },
         onUploadLkm = {
-            selectLkmLauncher.launch(Intent(Intent.ACTION_GET_CONTENT).apply { type = "application/octet-stream" })
+            selectLkmLauncher.launch(Intent(Intent.ACTION_GET_CONTENT).apply { type = "*/*" })
         },
         onClearLkm = { lkmSelection = LkmSelection.KmiNone },
         onSelectPartition = { index ->
